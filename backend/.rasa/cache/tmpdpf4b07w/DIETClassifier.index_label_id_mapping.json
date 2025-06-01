@@ -1,0 +1,14 @@
+{
+  "0": "ask_contact",
+  "1": "ask_events",
+  "2": "ask_exam_registration",
+  "3": "ask_fachschaft_role",
+  "4": "ask_forms_documents",
+  "5": "ask_join_fachschaft",
+  "6": "ask_office_hours",
+  "7": "ask_room_location",
+  "8": "ask_study_materials",
+  "9": "ask_support",
+  "10": "goodbye",
+  "11": "greet"
+}

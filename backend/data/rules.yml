@@ -1,0 +1,145 @@
+version: "3.1"
+
+rules:
+
+- rule: Begrüßung
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Verabschiedung
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Automatisch generierte Regeln für alle Intents → passende Antwort
+- rule: Frage nach Öffnungszeiten
+  steps:
+  - intent: ask_office_hours
+  - action: utter_ask_office_hours
+
+- rule: Frage nach Kontakt
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+
+- rule: Frage zur Raumlage
+  steps:
+  - intent: ask_room_location
+  - action: utter_ask_room_location
+
+- rule: Frage zu Events
+  steps:
+  - intent: ask_events
+  - action: utter_ask_events
+
+- rule: Frage zu Studienmaterialien
+  steps:
+  - intent: ask_study_materials
+  - action: utter_ask_study_materials
+
+- rule: Frage zur Fachschaftsrolle
+  steps:
+  - intent: ask_fachschaft_role
+  - action: utter_ask_fachschaft_role
+
+- rule: Frage zum Mitmachen
+  steps:
+  - intent: ask_join_fachschaft
+  - action: utter_ask_join_fachschaft
+
+- rule: Frage zu Support/Hilfe
+  steps:
+  - intent: ask_support
+  - action: utter_ask_support
+
+- rule: Frage zu Mitgliedern
+  steps:
+  - intent: ask_members
+  - action: utter_ask_members
+
+- rule: Frage zu Raum-Angeboten
+  steps:
+  - intent: ask_room_activities
+  - action: utter_ask_room_activities
+
+- rule: Frage zu Shop-Items
+  steps:
+  - intent: ask_shop_items
+  - action: utter_ask_shop_items
+
+- rule: Frage zu ersten Schritten
+  steps:
+  - intent: ask_first_steps
+  - action: utter_ask_first_steps
+
+- rule: Frage zum Mensa-Menü
+  steps:
+  - intent: ask_mensa_menu
+  - action: utter_ask_mensa_menu
+
+- rule: Frage zu WLAN
+  steps:
+  - intent: ask_wifi_support
+  - action: utter_ask_wifi_support
+
+- rule: Frage zu Treffen/Sitzungen
+  steps:
+  - intent: ask_meeting_dates
+  - action: utter_ask_meeting_dates
+
+- rule: Feedback geben
+  steps:
+  - intent: ask_give_feedback
+  - action: utter_ask_give_feedback
+
+- rule: Frage zu Lernplätzen
+  steps:
+  - intent: ask_learning_spaces
+  - action: utter_ask_learning_spaces
+
+- rule: Frage zu Sportangeboten
+  steps:
+  - intent: ask_sports_offers
+  - action: utter_ask_sports_offers
+
+- rule: Frage zu Wahlen
+  steps:
+  - intent: ask_fachschaft_election
+  - action: utter_ask_fachschaft_election
+
+- rule: Frage zum Sprecher
+  steps:
+  - intent: ask_fachschaft_speaker
+  - action: utter_ask_fachschaft_speaker
+
+- rule: Frage nach Event-Ideen
+  steps:
+  - intent: ask_event_idea
+  - action: utter_ask_event_idea
+
+- rule: Frage zum Technikverleih
+  steps:
+  - intent: ask_tech_rental
+  - action: utter_ask_tech_rental
+
+- rule: Frage zu Fahrten/Trips
+  steps:
+  - intent: ask_trips
+  - action: utter_ask_trips
+
+- rule: Frage zur Vernetzung
+  steps:
+  - intent: ask_meet_students
+  - action: utter_ask_meet_students
+
+- rule: Frage nach Linktree
+  steps:
+  - intent: ask_link_tree
+  - action: utter_ask_link_tree
+  
+- rule: Fallback bei unsicherer Erkennung
+  steps:
+  - intent: nlu_fallback
+  - action: action_smart_response
+

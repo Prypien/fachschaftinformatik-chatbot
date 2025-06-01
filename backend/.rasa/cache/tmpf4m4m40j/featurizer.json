@@ -1,0 +1,61 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_contact": 0,
+        "ask_events": 1,
+        "ask_exam_registration": 2,
+        "ask_fachschaft_role": 3,
+        "ask_forms_documents": 4,
+        "ask_join_fachschaft": 5,
+        "ask_office_hours": 6,
+        "ask_room_location": 7,
+        "ask_study_materials": 8,
+        "ask_support": 9,
+        "back": 10,
+        "goodbye": 11,
+        "greet": 12,
+        "nlu_fallback": 13,
+        "out_of_scope": 14,
+        "restart": 15,
+        "session_start": 16
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_analyze_dart_code": 13,
+        "utter_ask_contact": 14,
+        "utter_ask_events": 15,
+        "utter_ask_exam_registration": 16,
+        "utter_ask_fachschaft_role": 17,
+        "utter_ask_forms_documents": 18,
+        "utter_ask_join_fachschaft": 19,
+        "utter_ask_office_hours": 20,
+        "utter_ask_room_location": 21,
+        "utter_ask_study_materials": 22,
+        "utter_ask_support": 23,
+        "utter_goodbye": 24,
+        "utter_greet": 25
+      },
+      "entities": {},
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

@@ -1,0 +1,953 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - Hallo
+    - Hi
+    - Hey
+    - Guten Morgen
+    - Guten Tag
+    - Guten Abend
+    - Was geht?
+    - Yo
+    - Grüße!
+    - Na?
+    - Hi zusammen
+    - Hey du
+    - Servus
+    - Moin!
+    - Hallo nochmal
+    - Hey, was geht ab?
+    - Hiya
+    - Schön dich zu sehen
+    - Freut mich
+    - Lange nicht gesehen
+    - Yo Bot
+    - Hallo Fachschaftsbot
+    - Hey Assistent
+    - Hi Kumpel
+    - Hi Freund
+    - Hallo da draußen
+    - Was läuft?
+    - Was geht ab?
+    - Wie läuft’s?
+    - Ist jemand da?
+    - Was kannst du?
+    - Was kann ich mit dir machen?
+    
+
+- intent: goodbye
+  examples: |
+    - Tschüss
+    - Auf Wiedersehen
+    - Bis später
+    - Wir sehen uns
+    - Bis bald
+    - Mach’s gut
+    - Peace
+    - Ich bin raus
+    - Ich muss los
+    - Pass auf dich auf
+    - Hab einen schönen Tag
+    - Ich melde mich ab
+    - Das war’s erstmal
+    - Ciao
+    - Bis dann
+    - Bye bye
+    - Ich bin fertig hier
+    - Ich komme später wieder
+    - Bis zum nächsten Mal
+    - Ich geh jetzt
+    - Danke, tschüss!
+    - Danke, bis dann!
+    - Ich muss weiter
+    - Ich bin dann mal weg
+    - Man hört sich
+    - So long
+    - Das wär’s, danke
+    - Ich bin gleich wieder da
+    - Ich verabschiede mich
+    - Bis die Tage
+
+- intent: ask_office_hours
+  examples: |
+    - Wann hat die Fachschaft geöffnet?
+    - Wann ist euer Büro offen?
+    - Wann kann ich euch antreffen?
+    - Gibt es feste Öffnungszeiten?
+    - Seid ihr heute im Büro?
+    - Wann ist jemand im Fachschaftsraum?
+    - Wie lauten eure Bürozeiten?
+    - Wann ist das nächste Mal jemand da?
+    - Wann kann man bei euch vorbeikommen?
+    - Habt ihr feste Sprechstunden?
+    - Wann habt ihr offen?
+
+- intent: ask_contact
+  examples: |
+    - Wie kann ich euch kontaktieren?
+    - Wie komme ich mit euch in Kontakt?
+    - Wie kann ich euch erreichen?
+    - Wie kontaktiert man euch am besten?
+    - Kann ich euch irgendwie kontaktieren?
+    - Ich möchte euch kontaktieren, wie geht das?
+    - An wen kann ich mich bei Fragen wenden?
+    - Wer ist mein Ansprechpartner bei euch?
+    - Wer ist zuständig für Fragen?
+    - Gibt es jemanden, den ich ansprechen kann?
+    - Gibt es eine Anlaufstelle?
+    - Kann ich euch eine Nachricht schicken?
+    - Gibt es ein Kontaktformular?
+    - Habt ihr eine E-Mail-Adresse?
+    - Gibt es eine Möglichkeit, euch direkt zu schreiben?
+    - Wie nehme ich mit euch Kontakt auf?
+    - Wer hilft mir bei Fragen?
+    - Wohin kann ich mich bei Problemen wenden?
+    - Kann ich euch auch anonym kontaktieren?
+    - Gibt es eine zentrale Mailadresse?
+    - Wie finde ich euch bei Instagram?
+    - Seid ihr auf Social Media aktiv?
+    - Ich würde euch gern was schreiben
+    - Gibt’s eine Ansprechperson?
+    - Wo finde ich den Link zu eurem Kontaktformular?
+    - Gibt’s einen Fachschaftsverteiler?
+    - Ich hätte eine Frage – wohin damit?
+    - Wie stelle ich eine Anfrage an euch?
+    - Wer kann mir weiterhelfen?
+    - Wie finde ich den richtigen Ansprechpartner?
+    - Was ist der einfachste Weg, mit euch in Kontakt zu treten?
+    - Gibt es eine Gruppe oder einen Chat, wo ich euch finde?
+    - Habt ihr Social-Media-Kanäle?
+    - Gibt es eine Nummer, unter der ich euch erreichen kann?
+    - Könnt ihr mir eine Mailadresse geben?
+    - Gibt’s eine zentrale Kontaktperson?
+    - Wie kommuniziere ich am besten mit euch?
+    - Wer ist aktuell zuständig für Anfragen?
+    - Wo finde ich eure Kontaktdaten?
+    - Gibt es einen offiziellen Kontaktkanal?
+    - Bei wem kann ich mich melden?
+    - An wen von euch kann ich mich wenden?
+
+- intent: ask_room_location
+  examples: |
+    - Wo ist euer Büro?
+    - In welchem Gebäude seid ihr?
+    - Wie finde ich den Raum der Fachschaft?
+    - Wo ist euer Raum?
+    - Gibt es einen Lageplan der Uni?
+    - Ist das Fachschaftsbüro barrierefrei?
+    - Seid ihr in Gebäude 9?
+    - Wie komme ich zur Fachschaft?
+    - Wo genau seid ihr im Hauptgebäude?
+    - Ist euer Raum ausgeschildert?
+    - Wie finde ich euch auf dem Campus?
+    - Wo befindet sich der Fachschaftsraum?
+    - In welchem Stockwerk seid ihr?
+    - Welche Türnummer habt ihr?
+    - Wie komme ich zu euch, wenn ich vor Gebäude 9 stehe?
+    - Gibt es Wegweiser zur Fachschaft?
+    - Ist euer Büro leicht zu finden?
+    - Muss ich eine Treppe runter?
+    - Wo liegt das Fachschaftsbüro genau?
+    - Kann man euren Raum gut finden?
+    - Wie finde ich euren Raum, wenn ich neu an der Uni bin?
+    - Gibt es eine Beschilderung zu euch?
+    - Wo genau ist euer Eingang?
+    - Muss ich in den Keller?
+    - In welchem Flur seid ihr?
+    - Wo auf dem Campus liegt euer Büro?
+    - Gibt es einen Plan, wo euer Raum eingezeichnet ist?
+    - Wie komme ich ins Untergeschoss zu euch?
+    - Ist euer Raum direkt vom Haupteingang aus erreichbar?
+    - Muss ich einen bestimmten Eingang nehmen, um euch zu finden?
+    - Wo seid ihr im Gebäude verteilt?
+    - Liegt euer Raum im linken oder rechten Flügel?
+    - Seid ihr im Keller?
+    - Wo finde ich den Fachschaftsraum?
+    - Wo finde ich euch?
+
+- intent: ask_events
+  examples: |
+    - Wann ist euer nächster Karaokeabend?
+    - Gibt’s ein Wintergrillen?
+    - Findet ein Musikabend statt?
+    - Findet dieses Semester ein Plätzchenbacken statt?
+    - Findet wieder ein gemeinsames Kochen statt?
+    - Findet ein Workshop mit Abendessen statt?
+    - Organisiert ihr einen Kreativabend?
+    - Gibt es einen Abend mit Brettspielen?
+    - Habt ihr schon mal ein Mario-Kart-Turnier gemacht?
+    - Gibt es eine Campus-Rallye?
+    - Findet ein Speed-Friending-Event statt?
+    - Wann findet das Sommerfest statt?
+    - Macht ihr auch LAN-Sessions?
+    - Wird bald eine LAN-Party organisiert?
+    - Gibt es dieses Semester eine Ersti-Party?
+    - Gibt es ein gemeinsames Frühstück?
+    - Plant ihr ein Volleyballturnier?
+    - Gibt es mal wieder einen Chill-Abend?
+    - Wird eine Open-Mic-Night organisiert?
+    - Was ist euer nächstes Fun-Event?
+    - Gibt es ein Chill & Grill Event?
+    - Gibt es bald eine Veranstaltung?
+    - Macht ihr mal wieder ein Public Viewing?
+    - Wird ein Beachparty-Event geplant?
+    - Gibt es mal eine Retrospielnacht?
+    - Gibt es ein Spieleabend mit Switch?
+    - Wann ist das nächste Fachschafts-Event?
+    - Macht ihr auch Online-Events?
+    - Gibt es bald ein Quiz-Event?
+    - Was für Events stehen an?
+    - Macht ihr bald wieder eine LAN-Party?
+    - Organisiert ihr bald wieder eine Party?
+    - Was sind die nächsten großen Events der Fachschaft?
+    - Was habt ihr für Veranstaltungen?
+    - Wann sind die nächsten Veranstaltungen?
+    - Wann sind die nächsten Events?
+
+- intent: ask_study_materials
+  examples: |
+    - Habt ihr Altklausuren für Stochastik?
+    - Gibt es Altklausuren zu Technischer Informatik?
+    - Wo finde ich alte Klausuren zu OOP?
+    - Habt ihr allgemeine Altklausuren?
+    - Kann ich bei euch alte Prüfungen bekommen?
+    - Gibt es Vorlesungsfolien von früheren Semestern?
+    - Habt ihr Lernmaterialien zu Mathe 1?
+    - Wo finde ich Lernhilfen für Betriebssysteme?
+    - Habt ihr eine Sammlung von Altklausuren?
+    - Hat die Fachschaft Materialien zur Statistik-Klausur?
+    - Gibt es bei euch Altklausuren zu Datenbanken?
+    - Wie komme ich an die alten Prüfungen ran?
+    - Habt ihr auch Übungsblätter?
+    - Wo finde ich Altklausuren zu Rechnerarchitektur?
+    - Gibt es Mitschriften zu Theoretischer Informatik?
+    - Kann man bei euch alte Vorlesungsmaterialien bekommen?
+    - Habt ihr Zusammenfassungen für Webentwicklung?
+    - Gibt es Altklausuren für IT-Sicherheit?
+    - Habt ihr Lernhilfen zu Software Engineering?
+    - Wie komme ich an eure Lernunterlagen?
+    - Gibt es alte Klausuren zu Lineare Algebra?
+    - Könnt ihr mir Altklausuren für das dritte Semester schicken?
+    - Gibt es bei euch Altklausuren zu Informatik 1?
+    - Wie finde ich Altklausuren zu HCI?
+    - Habt ihr Vorlesungsfolien von früher?
+    - Gibt es eine Cloud mit alten Materialien?
+    - Habt ihr Altklausuren für alle Module?
+    - Gibt es PDF-Zusammenfassungen von früheren Jahren?
+    - Könnt ihr mir Lernmaterialien zur Verfügung stellen?
+    - Gibt es alte Prüfungen mit Lösungen?
+    - Habt ihr Altklausuren?
+    - Gibt es bei euch Altklausuren?
+    - Kann man bei euch alte Klausuren bekommen?
+
+- intent: ask_fachschaft_role
+  examples: |
+    - Was macht die Fachschaft eigentlich?
+    - Wofür seid ihr zuständig?
+    - Wie helft ihr den Studis?
+    - Warum gibt es euch?
+    - Was sind eure Aufgaben?
+    - Könnt ihr bei Problemen helfen?
+    - Was bringt mir die Fachschaft?
+    - Macht ihr mehr als nur Events?
+    - Was ist euer Ziel?
+    - Wofür kann ich euch ansprechen?
+    - Was genau macht ihr in der Fachschaft?
+    - Welche Aufgaben übernehmt ihr?
+    - Warum sollte ich mich an euch wenden?
+    - Was sind eure Zuständigkeiten?
+    - Was macht ihr für die Studierenden?
+    - Was macht die Fachschaft so den ganzen Tag?
+    - Welche Rolle spielt ihr im Studium?
+    - Was kann ich bei euch bekommen?
+    - Inwiefern unterstützt ihr uns?
+    - Was ist eure Funktion an der Hochschule?
+    - Seid ihr wie ein Studierendenrat?
+    - Was ist euer Beitrag für die Studierenden?
+    - Was tut ihr konkret für uns?
+    - Warum gibt es eine Fachschaft?
+    - Wofür ist die Fachschaft überhaupt da?
+    - Wie helft ihr uns im Studienalltag?
+    - Was ist euer Aufgabenbereich?
+    - Was bedeutet es, dass ihr die Fachschaft seid?
+    - Was macht eine Fachschaft überhaupt?
+    - Wer braucht eigentlich eine Fachschaft?
+    - In welchen Fällen kann ich mich an euch wenden?
+    - Für was seid ihr die richtige Anlaufstelle?
+    - Wie unterstützt ihr Erstsemester?
+    - Könnt ihr mir auch bei Studienfragen helfen?
+    - Was sind eure Hauptaufgaben?
+    - Was bringt es, mit der Fachschaft in Kontakt zu sein?
+    - Wobei genau helft ihr?
+    - Was kann ich von euch erwarten?
+    - Was ist der Sinn hinter einer Fachschaft?
+    - Arbeitet ihr auch mit der Hochschule zusammen?
+    - Gibt’s bei euch mehr als nur Partys?
+    - Was macht eigentlich die Fachschaft?
+
+
+- intent: ask_join_fachschaft
+  examples: |
+    - Wie kann ich bei euch mitmachen?
+    - Kann ich bei der Fachschaft helfen?
+    - Was muss ich tun, um Mitglied zu werden?
+    - Ist das freiwillig?
+    - Wann trefft ihr euch?
+    - Muss ich gewählt werden?
+    - Wer darf mitmachen?
+    - Kann man sich einfach einbringen?
+    - Gibt’s ein Kennenlerntreffen?
+    - Wie werde ich aktiv bei euch?
+    - Wie läuft das ab, wenn ich mitmachen will?
+    - Was muss ich tun, um bei euch einzusteigen?
+    - Muss ich irgendwas unterschreiben?
+    - Kann ich spontan mitmachen?
+    - Nehmt ihr neue Leute auf?
+    - Ich würde gerne bei der Fachschaft mitarbeiten
+    - Ich habe Interesse – wie kann ich dabei sein?
+    - Wann kann ich mal reinschauen?
+    - Gibt es offene Treffen für Interessierte?
+    - Wie kann ich mich engagieren?
+    - Wie kann ich bei euch mitwirken?
+    - Muss ich gewählt werden, um Mitglied zu sein?
+    - Ich würde euch gerne unterstützen – wie geht das?
+    - Gibt’s eine Möglichkeit, bei euch mitzumachen?
+    - Wie werde ich Teil der Fachschaft?
+    - Wie kann ich bei Projekten mithelfen?
+    - Kann ich auch als Ersti schon mitmachen?
+    - Was muss ich mitbringen, um mitzumachen?
+    - Gibt’s Aufgaben, bei denen ich helfen kann?
+    - Darf jeder bei euch mitmachen?
+    - Muss man bestimmte Voraussetzungen erfüllen?
+    - Gibt’s ein Aufnahmeverfahren?
+    - Kann ich mir mal anschauen, was ihr macht?
+    - Wie läuft ein Einstieg bei euch ab?
+    - Wann ist euer nächstes Treffen für Interessierte?
+    - Wo kann ich euch persönlich ansprechen, wenn ich mitmachen will?
+    - Ich möchte Teil eures Teams sein – wie geht das?
+    - Könnt ihr Hilfe gebrauchen?
+    - Was erwartet mich, wenn ich beitrete?
+    - Ich suche eine Möglichkeit, mich an der Hochschule zu engagieren – passt ihr da?
+    - Wie finde ich raus, ob ich bei euch reinpasse?
+    - Kann ich auch erstmal nur reinschnuppern?
+    - Gibt es ein Info-Treffen für neue Mitglieder?
+    - Muss ich für euch arbeiten oder ist das freiwillig?
+    - Wie aufwendig ist das, bei euch mitzumachen?
+    - Ich hab ein bisschen Zeit – kann ich euch unterstützen?
+
+
+- intent: ask_support
+  examples: |
+    - Ich brauche Hilfe
+    - Ich habe ein Problem im Studium
+    - Was mache ich bei Ärger mit einem Dozenten?
+    - Wer unterstützt mich bei Schwierigkeiten im Studium?
+    - Ich fühle mich überfordert, was kann ich tun?
+    - Ich bin durchgefallen, was jetzt?
+    - Ich komme nicht klar mit einem Modul
+    - Ich wurde unfair benotet
+    - Gibt es Hilfe bei mentalen Problemen im Studium?
+    - Ich habe Prüfungsangst, was kann ich tun?
+    - Ich bin unzufrieden mit meinem Studium
+    - Ich zweifle, ob ich im richtigen Studiengang bin
+    - Wo finde ich psychologische Beratung?
+    - Ich habe Stress mit Kommilitonen
+    - Ich will das Studium abbrechen, mit wem kann ich sprechen?
+    - Ich habe Probleme zu Hause, was kann ich tun?
+    - Gibt es Beratung bei finanziellen Sorgen?
+    - Ich wurde gemobbt, an wen kann ich mich wenden?
+    - Ich fühle mich allein im Studium
+    - Ich habe Angst vor der nächsten Prüfung
+    - Gibt es Hilfe bei Stress oder Burnout?
+    - Ich habe keine Motivation mehr
+    - Ich bin krank, was muss ich beachten?
+    - Gibt es Unterstützung bei Behinderung?
+    - Ich finde keine Freunde, was kann ich machen?
+    - Ich bin überfordert mit meinem Stundenplan
+    - Ich suche Hilfe bei persönlichen Problemen
+    - Ich brauche jemanden zum Reden
+    - Ich habe Angst, das Studium nicht zu schaffen
+    - Gibt es eine Anlaufstelle für Studierende in Not?
+    
+- intent: ask_members
+  examples: |
+    - Wer macht denn alles bei euch mit?
+    - Wer ist so bei euch dabei?
+    - Wer gehört zur Fachschaft?
+    - Wer macht da alles mit?
+    - Wer sitzt bei euch in der Runde?
+    - Wer ist bei euch aktiv?
+    - Wer engagiert sich bei euch?
+    - Wer ist Teil von der Fachschaft?
+    - Wer ist alles im Team?
+    - Wer macht das Ganze bei euch?
+    - Wer steckt hinter der Fachschaft?
+    - Wer gehört denn zu euch?
+    - Wer ist bei euch dabei?
+    - Wer arbeitet da mit?
+    - Wer macht den ganzen Kram?
+    - Wer gehört bei euch zum Kernteam?
+    - Wer ist fester Bestandteil?
+    - Wer organisiert das bei euch?
+    - Wer ist bei den Treffen dabei?
+    - Wer läuft bei euch alles rum?
+    - Wer hilft bei den Events?
+    - Wer ist bei den Sitzungen dabei?
+    - Wer ist schon länger in der Fachschaft?
+    - Wer macht das schon ne Weile?
+    - Wer macht das ehrenamtlich?
+    - Wer macht bei den Aktionen mit?
+    - Wer ist in eurer Gruppe?
+    - Wer plant bei euch mit?
+    - Wer ist alles am Start?
+    - Wer ist regelmäßig dabei?
+    
+- intent: ask_shop_items
+  examples: |
+    - Was kann man bei euch im Raum kaufen?
+    - Gibt's bei euch Snacks?
+    - Was habt ihr so an Essen oder Trinken da?
+    - Kann man bei euch Kaffee holen?
+    - Was kostet bei euch der Kaffee?
+    - Gibt’s bei euch auch was zu trinken?
+    - Habt ihr Paulaner Spezi?
+    - Was bietet ihr im Fachschaftsraum an?
+    - Gibt’s bei euch Tee?
+    - Kann man bei euch was Süßes kaufen?
+    - Was kostet bei euch ein Getränk?
+    - Gibt’s bei euch auch Kaltgetränke?
+    - Habt ihr auch was für den kleinen Hunger?
+    - Was verkauft ihr alles im Fachschaftsraum?
+    - Was kann man sich bei euch holen?
+    - Gibt’s bei euch was zum Naschen?
+    - Habt ihr auch Energy Drinks?
+    - Was kostet bei euch Spezi?
+    - Gibt es Papier bei euch?
+    - Kann man bei euch Klausurpapier holen?
+    - Gibt’s bei euch auch Cola oder Limo?
+    - Habt ihr günstige Snacks da?
+    - Bekommt man bei euch Kaffee auf Spendenbasis?
+    - Gibt’s bei euch Frühstück oder so?
+    - Was gibt’s bei euch für Getränke?
+    - Was kostet ein Snack bei euch?
+    - Was kriegt man bei euch alles?
+    - Habt ihr was zum Mitnehmen?
+    - Kann man bei euch was essen?
+    - Habt ihr was gegen Koffeinmangel? 😄
+    - Ich bin unterhoft und brauche Hilfe
+    - Gibt es bei euch Kaffee?
+    - Wie viel kostet bei euch der Kaffee?
+
+- intent: ask_room_activities
+  examples: |
+    - Was kann ich im Fachschaftsraum machen?
+    - Darf man einfach so in den Fachschaftsraum?
+    - Kann ich im Fachschaftsraum chillen?
+    - Ist der Fachschaftsraum auch zum Abhängen gedacht?
+    - Kann ich im Fachschaftsraum lernen, wenn keiner da ist?
+    - Ist der Fachschaftsraum offen für alle?
+    - Muss ich Mitglied sein, um reinzudürfen?
+    - Kann ich einfach im Fachschaftsraum sitzen?
+    - Dürfen da auch Erstis rein?
+    - Was darf ich im Fachschaftsraum eigentlich machen?
+    - Kann ich in der Pause in den Fachschaftsraum?
+    - Gibt’s da Plätze zum Arbeiten?
+    - Kann ich den Raum nutzen, wenn niemand von der Fachschaft da ist?
+    - Ist der Fachschaftsraum auch für Gruppenarbeiten gedacht?
+    - Kann man da auch mal nen Film schauen?
+    - Gibt’s da eine Switch zum Zocken?
+    - Wie läuft’s so ab im Fachschaftsraum?
+    - Darf ich Kaffee im Fachschaftsraum trinken?
+    - Kann ich da jemanden treffen und einfach reden?
+    - Ist der Raum auch zum Runterkommen gedacht?
+    - Gibt’s ne Couch im Fachschaftsraum?
+    - Darf ich da was essen oder trinken?
+    - Kann ich den Raum auch allein nutzen?
+    - Wird der Fachschaftsraum oft genutzt?
+    - Was passiert da normalerweise?
+    - Gibt es im Fachschaftsraum WLAN?
+    - Darf ich da einfach reingehen, wenn die Tür offen ist?
+    - Ist der Fachschaftsraum rund um die Uhr offen?
+    - Was geht im Fachschaftsraum so?
+    - Kann ich in den Fachschaftsraum auch ohne Schlüssel?
+
+- intent: ask_first_steps
+  examples: |
+    - Ich bin neu hier, was sollte ich wissen?
+    - Was muss ich als Ersti zuerst machen?
+    - Ich hab gerade angefangen zu studieren, was jetzt?
+    - Was sollte man als neuer Student machen?
+    - Was sind meine ersten Schritte hier?
+    - Wie starte ich am besten ins Studium?
+    - Was hilft beim Einstieg ins Studentenleben?
+    - Ich bin ganz neu an der Hochschule, was soll ich machen?
+    - Gibt’s eine Checkliste für Erstis?
+    - Was erwartet mich im ersten Semester?
+    - Was macht man am Anfang vom Studium?
+    - Wie finde ich mich am Campus zurecht?
+    - Ich kenne hier niemanden, wie finde ich Anschluss?
+    - Was sollte man als Ersti unbedingt tun?
+    - Gibt es Ersti-Veranstaltungen?
+    - Was gibt’s für Angebote für Erstsemester?
+    - Wie komme ich gut ins Studium rein?
+    - Ich bin das erste Mal hier, wohin zuerst?
+    - Gibt es einen Plan für den Studienstart?
+    - Muss ich irgendwas Wichtiges am Anfang beachten?
+    - Wie läuft die erste Woche ab?
+    - Gibt es eine Einführung für neue Studierende?
+    - Was brauche ich als Ersti?
+    - Wie finde ich meine Vorlesungsräume?
+    - Ich hab keine Ahnung, wo ich hinmuss
+    - Wo erfahre ich, was wann stattfindet?
+    - Wie finde ich andere Erstis?
+    - Gibt’s eine Ersti-Gruppe?
+    - Was kann ich tun, wenn ich mich verloren fühle?
+    - Gibt es einen Ersti-Guide?
+
+- intent: ask_mensa_menu
+  examples: |
+    - Was gibt es heute in der Mensa?
+    - Was gibt's in der Mensa?
+    - Was gibt es zu essen?
+    - Gibt’s heute was Leckeres in der Mensa?
+    - Was steht heute auf dem Mensaplan?
+    - Was wird heute in der Mensa serviert?
+    - Was kochen die heute?
+    - Was ist heute das Mittagsangebot?
+    - Was gibt es heute zu essen?
+    - Was gibt’s mittags in der Mensa?
+    - Weißt du, was heute auf dem Speiseplan steht?
+    - Gibt es heute was Vegetarisches?
+    - Was gibt’s heute für ein Menü?
+    - Wie sieht der Mensaplan heute aus?
+    - Gibt’s irgendwo den Mensa-Speiseplan?
+    - Was gibt’s zum Mittagessen?
+    - Was gibt’s heute in der Kantine?
+    - Was gibt’s in der Mensa zum Mittag?
+    - Was serviert die Mensa heute?
+    - Was ist heute das Tagesgericht?
+    - Was gibt’s heute bei Stuwe?
+    - Was bietet die Mensa heute an?
+    - Wie ist der Plan für heute in der Mensa?
+    - Gibt’s heute was mit Fleisch in der Mensa?
+    - Was hat die Mensa heute?
+    - Gibt es einen Link zum Speiseplan?
+    - Was kann man heute in der Mensa essen?
+    - Was gibt’s zum Lunch in der Mensa?
+    - Was steht heute auf der Karte?
+    - Was ist heutiges Tagesmenü?
+
+- intent: ask_wifi_support
+  examples: |
+    - Wie komme ich ins WLAN?
+    - Habt ihr WLAN?
+    - Gibt’s hier WLAN?
+    - Wie loggt man sich ins Uni-WLAN ein?
+    - Wie heißt das Uni-WLAN?
+    - Gibt es bei euch Internet?
+    - Ich komm nicht ins WLAN, was tun?
+    - WLAN geht nicht, was jetzt?
+    - Was ist das WLAN-Passwort?
+    - Welches WLAN nutzt man hier?
+    - Was brauche ich fürs WLAN?
+    - Gibt es WLAN im Fachschaftsraum?
+    - Wie verbinde ich mich mit eduroam?
+    - Was ist eduroam?
+    - Warum funktioniert mein WLAN nicht?
+    - Muss ich mich fürs WLAN anmelden?
+    - Ich brauche Internetzugang – wie geht das?
+    - Ich habe WLAN-Probleme, könnt ihr helfen?
+    - Wie richte ich das Hochschul-WLAN ein?
+    - Wie heißt das WLAN der Hochschule?
+    - Brauche ich ein Passwort fürs WLAN?
+    - Mein Internet spinnt, was tun?
+    - Gibt es freies WLAN am Campus?
+    - Wie geht das mit dem Uni-Internet?
+    - Was mache ich, wenn ich kein WLAN kriege?
+    - Kann ich auch ohne Hochschulkennung WLAN nutzen?
+    - Gibt’s WLAN auch außerhalb der Gebäude?
+    - Wie richte ich WLAN auf meinem Handy ein?
+    - Gibt es eine Anleitung fürs WLAN?
+    - Kann ich mit meinem Laptop ins WLAN?
+    
+- intent: ask_meeting_dates
+  examples: |
+    - Wann ist das nächste Fachschaftstreffen?
+    - Wann trefft ihr euch wieder?
+    - Wann sind eure Sitzungen?
+    - Gibt es regelmäßige Fachschaftssitzungen?
+    - Wann findet die nächste Sitzung statt?
+    - Wann trifft sich die Fachschaft?
+    - Wann kann man mal bei einem Treffen dabei sein?
+    - Habt ihr feste Sitzungstermine?
+    - Wann seid ihr wieder im Raum?
+    - Wann ist das nächste Meeting?
+    - Wie oft trefft ihr euch?
+    - Kann man einfach zu euren Treffen kommen?
+    - Wann kann man bei euch reinschauen?
+    - Gibt’s einen festen Tag fürs Treffen?
+    - Findet nächste Woche eine Sitzung statt?
+    - Wie läuft das mit den Fachschaftstreffen?
+    - Wann kann ich mal bei der Sitzung mitmachen?
+    - Wie oft macht ihr ein Fachschaftsmeeting?
+    - Wann kommen alle zusammen?
+    - Wie oft habt ihr eure Treffen?
+    - Wann ist euer nächstes Fachschaftsmeeting?
+    - Kann ich bei der nächsten Sitzung dabei sein?
+    - Wann seid ihr im Büro?
+    - Wann kann man euch mal persönlich treffen?
+    - Gibt’s eine offene Sitzung demnächst?
+    - Trefft ihr euch jede Woche?
+    - Wie oft ist die Fachschaftssitzung?
+    - Wann kann man euch live treffen?
+    - Wann kann man bei euch mitreden?
+    - Habt ihr bald ein Treffen?
+
+- intent: ask_give_feedback
+  examples: |
+    - Ich hätte Feedback für euch
+    - Ich wollte euch mal was sagen
+    - Kann ich euch Feedback geben?
+    - Ich habe eine Idee für euch
+    - Könntet ihr mal was zu XYZ machen?
+    - Das mit dem Event neulich fand ich nicht so gut
+    - Ich hätte einen Vorschlag
+    - Gibt es eine Möglichkeit, Kritik zu äußern?
+    - Ich würde gern was loswerden
+    - Ihr könntet mal mehr in den Stories posten
+    - Wäre cool, wenn ihr mal ein Turnier veranstaltet
+    - Ich finde, das geht besser
+    - Kann ich euch Rückmeldung geben?
+    - Ich hätte einen Verbesserungsvorschlag
+    - Ich wollte euch was mitteilen
+    - Wie kann man euch Feedback geben?
+    - Ich würde gern was anmerken
+    - Das letzte Event war top!
+    - Ich hab da mal ne Idee
+    - Das war nicht so meins
+    - Könntet ihr mehr auf neue Studis eingehen?
+    - Ich hätte da eine Anregung
+    - Könntet ihr mehr Snacks anbieten?
+    - Ich hab einen Vorschlag für neue Events
+    - Warum macht ihr eigentlich kein Pubquiz?
+    - Ich hätte gerne mehr Infos im Raum
+    - Ich find’s cool, was ihr macht – weiter so!
+    - Ich hab Lob und Kritik für euch
+    - Ich wüsste was, das man verbessern könnte
+    - Ich hab mir Gedanken gemacht, wollt ihr hören?
+    
+- intent: ask_learning_spaces
+  examples: |
+    - Wo kann ich gut lernen?
+    - Gibt es ruhige Lernplätze?
+    - Wo finde ich Gruppenarbeitsräume?
+    - Kann man in der Bib lernen?
+    - Gibt es Lernräume an der Hochschule?
+    - Wo kann ich ungestört lernen?
+    - Was ist ein guter Ort zum Lernen?
+    - Wo kann ich mit meiner Gruppe arbeiten?
+    - Gibt es ruhige Ecken zum Lernen?
+    - Wo kann man konzentriert lernen?
+    - Welche Räume sind gut zum Lernen?
+    - Gibt es Lernlounges?
+    - Wo habt ihr selbst gelernt?
+    - Wo ist es nicht so voll zum Lernen?
+    - Gibt’s irgendwo Steckdosen zum Lernen?
+    - Wo kann ich mit Laptop lernen?
+    - Wo sind die besten Lernorte auf dem Campus?
+    - Gibt’s Lernplätze in der Nähe der Fachschaft?
+    - Gibt es freie Räume zum Lernen?
+    - Wo finde ich einen Platz mit Ruhe?
+    - Wo kann man sich zum Lernen zurückziehen?
+    - Wo kann ich mich zum Lernen hinsetzen?
+    - Gibt es Tischgruppen zum Lernen?
+    - Gibt es Räume für Gruppenarbeit?
+    - Kann ich auch abends noch lernen?
+    - Wo finde ich Platz, wenn es voll ist?
+    - Gibt’s Alternativen zur Bibliothek?
+    - Wo kann ich ohne viel Lärm lernen?
+    - Wo kann ich tagsüber gut lernen?
+    - Gibt’s einen Lernraum mit Whiteboard?
+
+- intent: ask_sports_offers
+  examples: |
+    - Wo finde ich den Hochschulsport?
+    - Gibt’s Sportangebote an der Hochschule?
+    - Bietet ihr Sport an?
+    - Wo kann man hier Sport machen?
+    - Macht ihr als Fachschaft auch Sport?
+    - Kann man hier irgendwo Volleyball spielen?
+    - Gibt’s Yoga-Kurse an der Uni?
+    - Habt ihr Fußballangebote?
+    - Kann man irgendwo trainieren gehen?
+    - Gibt’s hier Fitnessräume?
+    - Was gibt’s so an Sportkursen?
+    - Gibt’s Sportangebote für Anfänger?
+    - Kann ich einfach mitmachen beim Hochschulsport?
+    - Ist der Hochschulsport kostenlos?
+    - Wann sind die Kurse vom Hochschulsport?
+    - Gibt’s auch was mit Entspannung, so Yoga oder so?
+    - Wo ist das Sportzentrum?
+    - Wie meld ich mich für Sport an?
+    - Gibt’s Laufgruppen?
+    - Was für Sportarten kann man hier machen?
+    - Wird hier auch Basketball angeboten?
+    - Gibt’s einen Sportplan oder sowas?
+    - Gibt es Krafttraining an der Hochschule?
+    - Kann ich ohne Anmeldung irgendwo mitmachen?
+    - Wo ist der Sportplatz?
+    - Ich will mal wieder Sport machen, was geht?
+    - Wo kann ich Tischtennis spielen?
+    - Gibt’s Kurse am Abend?
+    - Findet man über Sport neue Leute?
+    - Wird auch Schwimmen angeboten?
+
+
+- intent: ask_fachschaft_election
+  examples: |
+    - Wann finden die nächsten Fachschaftswahlen statt?
+    - Wie läuft eine Wahl bei euch ab?
+    - Wer ist momentan im Fachschaftsrat?
+    - Wie werde ich Fachschaftsrat?
+    - Was muss ich tun, um mich zur Wahl aufzustellen?
+    - Wie werde ich gewählt?
+    - Wo kann ich mich zur Wahl anmelden?
+    - Was sind die Voraussetzungen, um zu kandidieren?
+    - Wer kann kandidieren?
+    - Wie oft wird gewählt?
+    - Wer ist derzeit Teil der Fachschaft?
+    - Gibt es eine Liste der aktuellen Fachschaftsmitglieder?
+    - Wann war die letzte Wahl?
+    - Wo erfahre ich das Wahlergebnis?
+    - Wie kann ich bei der Wahl mitmachen?
+    - Muss ich studieren, um gewählt zu werden?
+    - Wie funktioniert die Stimmabgabe?
+    - Wann beginnt die Wahlphase?
+    - Wann endet die Wahl?
+    - Was bringt es, gewählt zu werden?
+    - Wer darf wählen?
+    - Wie viele Sitze hat der Fachschaftsrat?
+    - Wo finde ich Informationen zur Fachschaftswahl?
+    - Wie werde ich Teil der Fachschaftsvertretung?
+    - Wird die Wahl online durchgeführt?
+    - Wie oft gibt es Neuwahlen?
+    - Muss ich persönlich erscheinen zur Wahl?
+    - Wo finden die Fachschaftswahlen statt?
+    - Kann ich auch anonym wählen?
+    - Gibt es eine Wahlbenachrichtigung?
+
+
+- intent: ask_fachschaft_speaker
+  examples: |
+    - Wer ist momentan Sprecher der Fachschaft?
+    - Wie wird der Sprecher der Fachschaft gewählt?
+    - Wer ist aktuell Fachschaftssprecher?
+    - Wer leitet eure Fachschaft?
+    - Wer ist das Gesicht der Fachschaft?
+    - Wie werde ich Sprecher der Fachschaft?
+    - Was muss man tun, um Fachschaftssprecher zu werden?
+    - Ist der Fachschaftssprecher gewählt?
+    - Wer wurde bei euch zum Sprecher gewählt?
+    - Kann ich Sprecher der Fachschaft werden?
+    - Welche Aufgaben hat ein Fachschaftssprecher?
+    - Wie lange bleibt man Sprecher der Fachschaft?
+    - Gibt es mehrere Sprecher?
+    - Wer darf Sprecher der Fachschaft sein?
+    - Muss man gewählt werden, um Sprecher zu sein?
+    - Wie wird man Vorsitzender der Fachschaft?
+    - Habt ihr einen offiziellen Sprecher?
+    - Wer ist zuständig für die Leitung der Fachschaft?
+    - Wie oft wird der Sprecher neu gewählt?
+    - Gibt es Stellvertreter des Sprechers?
+    - Ist der Sprecher Ansprechperson für alle Fragen?
+    - Wer war in der letzten Amtszeit Sprecher?
+    - Wie finde ich heraus, wer gerade Sprecher ist?
+    - Kann ich den Fachschaftssprecher kontaktieren?
+    - Wer vertritt die Fachschaft nach außen?
+    - Ist der Sprecher im Fachschaftsrat?
+    - Hat der Sprecher eine besondere Rolle?
+    - Kann ich mich als Vorsitz bewerben?
+    - Wie bewerbe ich mich als Sprecher?
+    - Was macht der Sprecher konkret?
+
+
+- intent: ask_event_idea
+  examples: |
+    - Ich würde gern ein Event planen
+    - Ich habe mir überlegt, etwas anzubieten
+    - Kann ich bei euch was Eigenes starten?
+    - Ich hätte eine Idee für eine Veranstaltung
+    - Wie kann ich bei euch ein Event vorschlagen?
+    - Dürfen wir Studis auch Events organisieren?
+    - Ich hab Lust, was für alle zu planen
+    - Kann man einfach ein Event bei euch anmelden?
+    - Ich will was für die anderen Studis machen
+    - Wie funktioniert das mit eigenen Events?
+    - Was muss ich tun, um eine Idee umzusetzen?
+    - Ich hab da so eine Eventidee…
+    - Ich hab Bock, was zu veranstalten – geht das?
+    - An wen wende ich mich mit einer Eventidee?
+    - Kann ich einfach was organisieren?
+    - Ich will mithelfen, ein Event auf die Beine zu stellen
+    - Gibt’s eine Möglichkeit, eigene Ideen einzubringen?
+    - Wie läuft das ab, wenn ich ein Event vorschlage?
+    - Ich habe ein paar Ideen für coole Aktionen
+    - Ich möchte gern etwas auf dem Campus organisieren
+    - Kann man bei euch eigene Formate einbringen?
+    - Wie bringe ich einen Vorschlag bei euch ein?
+    - Ich will was für die Fachschaft beisteuern
+    - Ich hab eine Idee für die Community
+    - Wie starte ich was Neues bei euch?
+    - Ich hätte gern Feedback zu meiner Eventidee
+    - Ich plane was und brauche eure Unterstützung
+    - Wie melde ich ein Event bei euch an?
+    - Kann ich als Student ein eigenes Event planen?
+    - Ich will etwas Cooles für alle starten
+
+
+
+- intent: ask_tech_rental
+  examples: |
+    - Kann ich bei euch Technik ausleihen?
+    - Verleiht ihr Beamer oder Lautsprecher?
+    - Kann man über die Fachschaft Technik leihen?
+    - Habt ihr einen Beamer zum Ausleihen?
+    - Kann ich bei euch ein Mikrofon bekommen?
+    - Verleiht ihr Kameras?
+    - Habt ihr ein Stativ, das ich nutzen kann?
+    - Gibt es bei euch ein HDMI-Kabel zum Leihen?
+    - Ich brauche Boxen – habt ihr welche?
+    - Kann ich ein Aufnahmegerät bei euch bekommen?
+    - Habt ihr einen Laptop zum Verleihen?
+    - Gibt es ein Verlängerungskabel bei euch?
+    - Kann ich eine Maus oder Tastatur bei euch leihen?
+    - Habt ihr Adapter oder Dongles?
+    - Kann ich mir einen Projektor ausleihen?
+    - Gibt es Kopfhörer zum Leihen?
+    - Kann ich Technik für ein Event bekommen?
+    - Ich brauche ein Mikro für ein Interview – habt ihr sowas?
+    - Kann man bei euch ein Mischpult ausleihen?
+    - Habt ihr ein Lichtstativ oder Scheinwerfer?
+    - Kann ich ein Präsentationsgerät bei euch leihen?
+    - Gibt es eine Kamera mit Stativ bei euch?
+    - Verleiht ihr Audiotechnik?
+    - Kann ich Technik übers Wochenende leihen?
+    - Gibt es mobile Lautsprecher zum Ausleihen?
+    - Ich brauche eine GoPro – habt ihr eine?
+    - Kann ich einen Greenscreen bei euch leihen?
+    - Gibt es Powerbanks oder Ladegeräte zum Leihen?
+    - Habt ihr Technik für hybride Veranstaltungen?
+    - Gibt es ein Formular oder Ablauf fürs Ausleihen?
+
+- intent: ask_trips
+  examples: |
+    - Macht ihr manchmal Ausflüge?
+    - Organisiert ihr auch größere Fahrten?
+    - Gibt es bei euch Skifahrten?
+    - Findet mal eine Fahrt ins Ausland statt?
+    - Gibt es Tagestrips mit der Fachschaft?
+    - Macht ihr mal einen Wochenendausflug?
+    - Gibt es gemeinsame Reisen für Studierende?
+    - Was für Ausfahrten plant ihr so?
+    - Organisiert ihr auch mehrtägige Trips?
+    - Gibt es Busfahrten zu Events?
+    - Gibt es bei euch Studienfahrten?
+    - Macht ihr mal eine Fahrt in eine andere Stadt?
+    - Wird eine gemeinsame Fahrt geplant?
+    - Gibt es internationale Trips?
+    - Plant ihr eine Fahrt ins Ausland?
+    - Was sind die nächsten Ausflüge?
+    - Gibt es eine Skiausfahrt dieses Jahr?
+    - Gibt’s Fahrten zu Messen oder Konferenzen?
+    - Fahrt ihr gemeinsam zu Unisport-Events?
+    - Was kostet eine Fahrt mit der Fachschaft?
+    - Gibt es jedes Semester Ausflüge?
+    - Gibt es Fahrten für Erstis?
+    - Wie läuft eine Fachschaftsfahrt ab?
+    - Darf jeder bei euren Fahrten mit?
+    - Was muss ich tun, um bei einem Trip dabei zu sein?
+    - Wie kann ich mich für Ausflüge anmelden?
+    - Gibt es Fahrten zum Wandern oder in die Berge?
+    - Fahrt ihr auch mal ans Meer?
+    - Wird es dieses Jahr wieder eine große Fahrt geben?
+    - Gibt es auch spontane Trips?
+
+
+- intent: ask_meet_students
+  examples: |
+    - Wie lerne ich Leute an der Hochschule kennen?
+    - Wo finde ich am besten Anschluss?
+    - Ich will neue Leute kennenlernen – was kann ich tun?
+    - Gibt es Treffpunkte zum Leute kennenlernen?
+    - Ich kenne noch niemanden – was jetzt?
+    - Wie finde ich Kommilitonen aus meinem Semester?
+    - Gibt es Events zum Kontakte knüpfen?
+    - Wie komme ich mit anderen Studierenden in Kontakt?
+    - Ich bin neu – wie finde ich Anschluss?
+    - Gibt es ein Ersti-Treffen?
+    - Ich suche Anschluss – habt ihr Tipps?
+    - Gibt es Gruppen zum Austauschen?
+    - Wo treffe ich andere Studierende?
+    - Was sind gute Orte, um Leute kennenzulernen?
+    - Wie finde ich Gleichgesinnte an der Uni?
+    - Gibt es Veranstaltungen zum Kennenlernen?
+    - Ich möchte Teil einer Gruppe sein – wie geht das?
+    - Ich bin schüchtern – wie komme ich in Kontakt?
+    - Gibt es Stammtische oder Meetups?
+    - Wie kann ich andere aus meinem Studiengang treffen?
+    - Ich will nicht allein durchs Studium gehen – was tun?
+    - Gibt es offene Treffen für neue Studierende?
+    - Wird ein Get-together für Erstis organisiert?
+    - Wo finde ich neue Kontakte an der Hochschule?
+    - Wie lerne ich andere aus meinem Studiengang kennen?
+    - Ich suche Anschluss an die Community – was gibt’s da?
+    - Gibt es ein Willkommens-Event zum Kontakte knüpfen?
+    - Was ist ein guter Start, um andere kennenzulernen?
+    - Gibt es Austauschformate zum Leute treffen?
+    - Ich will einfach mehr Leute kennenlernen – wie?
+    - Was macht ihr für neue Studierende zum Vernetzen?
+
+- intent: ask_link_tree
+  examples: |
+    - Hast du den Linktree für mich?
+    - Kannst du mir den Linktree schicken?
+    - Wo finde ich euren Linktree?
+    - Gibt’s einen Link zu all euren Infos?
+    - Kannst du kurz den Linktree posten?
+    - Wo ist der Fachschafts-Linktree?
+    - Hast du einen Sammellink für eure Seiten?
+    - Gibt’s eine Übersicht mit all euren Links?
+    - Wo finde ich alles Wichtige gebündelt?
+    - Kannst du mir eure Link-Sammlung geben?
+    - Gibt’s bei euch sowas wie einen Linktree?
+    - Ich brauch mal euren Linktree
+    - Wo habt ihr eure wichtigsten Links gesammelt?
+    - Schickst du mir bitte den Linktree?
+    - Gibt es einen zentralen Link?
+    - Wo ist der zentrale Überblick?
+    - Ich suche euren Hauptlink – kannst du helfen?
+    - Wo steht euer gesamter Info-Link?
+    - Ist euer Linktree noch aktuell?
+    - Find ich euren Insta-Link im Linktree?
+    - Gibt’s dort auch euren Cloud-Zugang?
+    - Habt ihr einen Shortcut zu euren Plattformen?
+    - Kann ich da alles auf einen Blick finden?
+    - Gibt’s eine Seite mit allen Infos zur Fachschaft?
+    - Hast du den Link mit allen Sammelseiten?
+    - Schickst du mir eure Link-Übersicht?
+    - Wie komm ich auf eure Link-Seite?
+    - Gibt’s einen Zugang zu all euren Kanälen?
+    - Ich brauch den Link zu euren Angeboten
+    - Schick mal den Linktree rüber
+    - Wie finde ich euren Sammellink nochmal?
+    
+- intent: check_ollama_status
+  examples: |
+    - Läuft das Modell?
+    - Läuft Ollama?
+    - Funktioniert Ollama?
+    - Ist dein Gehirn aktiv?
+

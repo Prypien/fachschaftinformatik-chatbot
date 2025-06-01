@@ -1,0 +1,132 @@
+version: "3.1"
+
+actions:
+  - action_smart_response
+  - action_check_ollama_health
+
+intents:
+  - greet
+  - goodbye
+  - ask_office_hours
+  - ask_contact
+  - ask_room_location
+  - ask_events
+  - ask_study_materials
+  - ask_fachschaft_role
+  - ask_join_fachschaft
+  - ask_support
+  - ask_members
+  - ask_shop_items
+  - ask_room_activities
+  - ask_first_steps
+  - ask_mensa_menu
+  - ask_wifi_support
+  - ask_meeting_dates
+  - ask_give_feedback
+  - ask_learning_spaces
+  - ask_sports_offers
+  - ask_fachschaft_election
+  - ask_fachschaft_speaker
+  - ask_event_idea
+  - ask_tech_rental
+  - ask_trips
+  - ask_meet_students
+  - ask_link_tree
+  - check_ollama_status
+
+responses:
+  utter_greet:
+    - text: |
+        "Hey! 👋 Ich bin dein Fachschafts-Bot – frag mich einfach irgendwas rund ums Studium oder das Campusleben.
+
+        Ich kann dir zum Beispiel helfen bei:
+        • 📍 Wo finde ich was? (Raum, Gebäude, Bib, Lernplätze)
+        • 📚 Altklausuren & Lernmaterialien
+        • 🗳️ Fachschaft & Mitmachen
+        • 🥳 Events, Fahrten & Gruppen
+        • 🛠️ Technikverleih & Services im Raum
+        • 📦 Snacks, Papier & kleine Einkäufe"
+
+  utter_goodbye:
+    - text: "Mach’s gut und viel Erfolg im Studium! 📚✨"
+
+  utter_ask_office_hours:
+    - text: "Du findest uns meistens Werktags zwischen 8 und 17 Uhr im Fachschaftsbüro in Gebäude 9 🏢 Einfach die Treppe runter und rechts halten - komm gern vorbei!"
+
+  utter_ask_contact:
+    - text: "Du erreichst uns unter INF.Fachschaft@Reutlingen-University.de oder auf Instagram @inf.fachschaft."
+
+  utter_ask_room_location:
+    - text: "Unser Büro ist in Gebäude 9 Treppe runter rechts halten, gleich links neben den Toiletten."
+
+  utter_ask_events:
+    - text: "Wir posten alle Events rechtzeitig über Studenten-EMail oder auch über Instagram @inf.fachschaft bleib dran! Ein Kalender mit allen aufkommenden Events findet ihr am Eingang 📅"
+
+  utter_ask_study_materials:
+    - text: "Wir haben Altklausuren und Lernhilfen, schreib uns einfach oder komm vorbei! Die meisten Materialien liegen auch in unserer Cloud, Link gibt es auf Nachfrage."
+
+  utter_ask_fachschaft_role:
+    - text: "Wir vertreten eure Interessen gegenüber der Hochschule, organisieren Events und bieten Hilfe bei Problemen. Wir sind eure Anlaufstelle für alles rund ums Studium und Unileben. Ihr könnt wenn ihr ein Studiengang hier in der Fakultät für Informatik belegt auch gerne uns jederzeit vorbeikommen"
+
+  utter_ask_join_fachschaft:
+    - text: "Du kannst jederzeit mitmachen! Schreib uns oder komm einfach vorbei. Eingang Treppe runter und hinten auf der linken Seite. Übrigens: Die Fachschaftstreffen sind jeden ersten Mittwoch im Monat. Links oben der Link!"
+
+  utter_ask_support:
+    - text: "Wir helfen dir, die richtigen Stellen zu finden, sei es bei Prüfungsstress, Beschwerden oder Orientierung. Wenn du Probleme hast, melde dich bei uns, wir kennen Anlaufstellen und unterstützen dich gerne."
+    
+  utter_ask_members:
+    - text: "Bei uns machen viele Studierende aus allen Semestern mit 🎓 Jeder ist willkommen, wir sind ein bunt gemischtes Team aus allen Studiengängen."
+
+  utter_ask_shop_items:
+    - text: "Im Fachschaftsraum bieten wir dir verschiedene Getränke und Snacks an. Alles natürlich zum Einkaufspreis, komm einfach vorbei und schau was wir alles haben."
+
+  utter_ask_room_activities:
+    - text: "In unserem Raum kannst du:\n\n🎮 Switch spielen\n📺 Serien oder Filme schauen\n💬 Dich mit Leuten treffen und chillen\n📚 Lernen oder Gruppenarbeiten machen\n☕ Einen Kaffee trinken und entspannen\n\nKomm einfach vorbei! 😊"
+  utter_ask_first_steps:
+    - text: "Willkommen an der Hochschule! 🎓 Starte am besten mit dem Campus-Guide für Erstis(Findest du Online oder in deiner Ersti Tasche :))und komm zu den Einführungsveranstaltungen. Und wenn du Fragen hast: einfach fragen! 😊"
+
+  utter_ask_mensa_menu:
+    - text: "Den aktuellen Speiseplan findest du immer hier: https://www.my-stuwe.de/mensa/mensa-reutlingen/. 🍝🥗"
+
+  utter_ask_wifi_support:
+    - text: "Um ins Campus-WLAN zu kommen, verbinde dich mit 'eduroam' und melde dich mit deiner Hochschulkennung + Passwort an. Eine genaue Anleitung gibt’s auf der Hochschul-IT-Seite! https://www.reutlingen-university.de/hochschule/organisation-und-einrichtungen/bibliothek-lernzentrum/lernen-arbeiten"
+
+  utter_ask_meeting_dates:
+    - text: "Unsere Fachschaftstreffen sind jeden ersten Mittwoch im Monat. 📅 Komm einfach vorbei, wir freuen uns immer über neue Gesichter!"
+
+  utter_ask_give_feedback:
+    - text: "Du hast Feedback oder Ideen? 🎯 Schreib uns einfach eine Mail an INF.Fachschaft@Reutlingen-University.de oder sprich uns persönlich an. Wir freuen uns über jede Rückmeldung!"
+
+  utter_ask_learning_spaces:
+    - text: "In der Bibliothek gibt es ruhige Lernbereiche. 📚 Auch manche Fakultäten bieten Gruppenräume oder Lernlounges an!"
+
+  utter_ask_sports_offers:
+    - text: "Der Hochschulsport bietet viele Kurse von Yoga bis Fußball! ⚽ Schau auf deren Website oder im Aushang am Sportzentrum."
+
+  utter_ask_fachschaft_election:
+    - text: "Die Fachschaftswahlen finden meist einmal jährlich statt. 📅 Infos und Termine gibt’s rechtzeitig per Mail oder Aushang."
+
+  utter_ask_fachschaft_speaker:
+    - text: "Fachschaftssprecher wird man durch Wahl im Team oder bei der Wahlversammlung. Frag uns einfach, wenn du Interesse hast!"
+
+  utter_ask_event_idea:
+    - text: "Neue Eventideen? Mega! 🎉 Schreib uns einfach oder bring deine Idee direkt bei einem Treffen ein. Alle Links findest du hier: 👉 [Zum Linktree](https://linktr.ee/inf.fachschaft?fbclid=PAZXh0bgNhZW0CMTEAAadvOnwQxYb-sJV4RRn1GA1BV_XQbHUtdMlZBetZN3nauKI6sg_EItRUVNsGTg_aem_rmkxqMmSn3iSeiBpKY-bdg)"
+
+  utter_ask_tech_rental:
+    - text: "Teilweise kannst du Technik wie Beamer oder Lautsprecher über die Fachschaft ausleihen. Es gibt jedoch hier in der Fakultät für Informatik einen eigenen Ausleihservice. Mehr Infos findest du hier: https://www.reutlingen-university.de/hochschule/organisation-und-einrichtungen/bibliothek-lernzentrum/medien-geraete-ausleihen"
+
+  utter_ask_trips:
+    - text: "Ja, manchmal organisieren wir Fahrten oder Ausflüge – z.B. Skifahrten oder Tagestrips. Infos gibt's immer rechtzeitig auf unseren Kanälen! Zum Ersti Ausflug kannst du dich auch hier anmelden: 👉 https://linktr.ee/inf.fachschaft?fbclid=PAZXh0bgNhZW0CMTEAAadvOnwQxYb-sJV4RRn1GA1BV_XQbHUtdMlZBetZN3nauKI6sg_EItRUVNsGTg_aem_rmkxqMmSn3iSeiBpKY-bdg"
+
+  utter_ask_meet_students:
+    - text: "Komm einfach zu Events oder Fachschaftstreffen! 🎉 Perfekt, um neue Leute aus deinem Semester und anderen Semestern kennenzulernen."
+    
+  utter_ask_link_tree:
+    - text: "Ja hier ist der Linktree: https://linktr.ee/inf.fachschaft"
+    
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
